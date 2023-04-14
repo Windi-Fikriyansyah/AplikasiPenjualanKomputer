@@ -1,0 +1,17 @@
+<div class="col-lg-4">
+    <div class="card card-widget">
+        <div class="card-body">
+            <form action="<?=base_url('laporan_pendapatan/lap_pendapatan');?>" method="POST">
+                <div class="form-group">
+                    <label for="tgl_mulai">Mulai</label>
+                        <input class="form-control" type="date" name="tgl_mulai" id="tgl_mulai" value="<?php $bulan = mktime(0,0,0, date('m')-1, date('d'), date('Y')); echo date('Y-m-d', $bulan);?>" prequired="">
+                </div>
+                <div class="form-group">
+                    <label for="tgl_sampai">Sampai</label>
+                        <input class="form-control" type="date" name="tgl_sampai" id="tgl_sampai" value="<?=date('Y-m-d');?>" required="">
+                </div>
+                <button type="submit" class="btn btn-secondary">Lihat Laporan</button>
+            </form>
+        </div>
+    </div>
+</div>  
